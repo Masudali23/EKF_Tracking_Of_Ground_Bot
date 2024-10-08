@@ -39,7 +39,7 @@ The Extended Kalman Filter (EKF) is used for state estimation in non-linear syst
 ### Python Implementation:
 •⁠  ⁠Python 3.6+
 •⁠  ⁠Install necessary packages using:
-    ```bash
+ 
     pip install -r requirements.txt
 
 
