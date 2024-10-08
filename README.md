@@ -22,18 +22,18 @@ The Extended Kalman Filter (EKF) is used for state estimation in non-linear syst
 - Comparison of estimated values against ground truth data.
 
 ## Folder Structure
-```bash
+
 EKF_Tracking_Of_Ground_Bot/
 ├── EKF_Cpp/                  # C++ implementation
-    ├── build/                # you need to build by your own for compilation of all cpp files
-    └── data/                 # contain the input files
-    └── Docs/                 # contain the information about the input and out files
-    └── src/                  # all cpp code and the header files
+│   ├── build/                # You need to build this directory for compilation of all C++ files
+│   └── data/                 # Contains the input files
+│   └── Docs/                 # Contains information about the input and output files
+│   └── src/                  # All C++ code and header files
 
 ├── EKF_Python/               # Python implementation
-    ├── Script/               # Python code
-    └── data/                 # Input files for Python version
-    └── Output/               # Output folder for results
+│   ├── Script/               # Python code
+│   └── data/                 # Input files for the Python version
+│   └── Output/               # Output folder for results
 
 ## Prerequisites
 
@@ -42,6 +42,7 @@ EKF_Tracking_Of_Ground_Bot/
 - Install necessary packages using:
   ```bash
   pip install -r requirements.txt
+
 
 ### C++ Implementation:
 - C++11 or higher
@@ -54,7 +55,8 @@ EKF_Tracking_Of_Ground_Bot/
 1. Navigate to `EKF_Cpp/`.
 2. Build the project:
    ```bash
-   mkdir build && cd build
+   mkdir build
+   cd build
    cmake ..
    make
    ./EKF_Tracking ../data/input.txt ./output.txt
