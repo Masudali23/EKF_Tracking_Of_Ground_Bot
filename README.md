@@ -16,11 +16,14 @@ This repository contains both C++ and Python implementations for tracking a grou
 
 ## Introduction
 
-The Extended Kalman Filter (EKF) is a powerful algorithm used for state estimation in systems characterized by non-linear dynamics. In the context of robotics, it is particularly useful for tracking moving objects, such as a ground bot navigating through an environment. The EKF operates by fusing noisy measurements from various sensors—specifically Lidar and Radar to produce a more accurate estimate of the bot's position and velocity.
+- **Algorithm**: Extended Kalman Filter (EKF) for state estimation in non-linear systems.
+- **Application**: Tracking moving objects like ground bots in various environments.
+- **Data Fusion**: Combines noisy Lidar (distance measurements) and Radar (motion detection) data.
+- **Process**: 
+  - **Prediction**: Forecasts the next state based on current state and dynamics.
+  - **Update**: Refines predictions with new measurements to minimize uncertainties.
+- **Objective**: Evaluate EKF performance against ground truth for improved autonomous navigation and robotics.
 
-Lidar provides high-resolution distance measurements that are essential for accurate spatial awareness, while Radar excels in detecting the relative motion of nearby objects. Given the inherent noise in these sensor readings, the EKF employs a two-step process: prediction and update. During the prediction step, the EKF uses the current state of the bot and the dynamics of the environment to forecast its next state. In the update step, it refines this prediction based on the new sensor measurements, adjusting the state estimates to account for uncertainties.
-
-This project aims to demonstrate the efficacy of the EKF in processing sensor data in real-time. By comparing the EKF's output with ground truth values, we can evaluate its performance in accurately estimating the ground bot's state, even in the presence of sensor noise and other environmental challenges. The insights gained from this implementation can be valuable for applications in autonomous navigation, robotics, and sensor fusion.
 
 ## Features
 - Fusion of Radar and Lidar sensor data.
