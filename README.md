@@ -22,7 +22,7 @@ The Extended Kalman Filter (EKF) is used for state estimation in non-linear syst
 - Comparison of estimated values against ground truth data.
 
 ## Folder Structure
-
+```bash
 EKF_Tracking_Of_Ground_Bot/
 ├── EKF_Cpp/                  # C++ implementation
 │   ├── build/                # You need to build this directory for compilation of all C++ files
@@ -34,45 +34,3 @@ EKF_Tracking_Of_Ground_Bot/
 │   ├── Script/               # Python code
 │   └── data/                 # Input files for the Python version
 │   └── Output/               # Output folder for results
-
-## Prerequisites
-
-### Python Implementation:
-- Python 3.6+
-- Install necessary packages using:
-  ```bash
-  pip install -r requirements.txt
-
-
-### C++ Implementation:
-- C++11 or higher
-- cmake
-- g++ or clang++
-
-## Usage
-
-#### C++ Version
-1. Navigate to `EKF_Cpp/`.
-2. Build the project:
-   ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make
-   ./EKF_Tracking ../data/input.txt ./output.txt
-- Ensure that the Input.txt is present in EKF_CPP/data/
-
-### Python Version
-1. Navigate to `EKF_Python/Script/`.
-2. Run the Python script:
-   ```bash
-   python3 main.py
-- Ensure that the Input.txt is present in EKF_Python/data/
-
-### Results
-The output of the EKF will be saved in `Output/output.txt`. The results will include the estimated position and velocity alongside the ground truth for evaluation.
-
-### References
-- [Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter)
-- [Radar vs Lidar](https://spectrum.ieee.org/radar-vs-lidar)
-
