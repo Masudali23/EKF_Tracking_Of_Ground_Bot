@@ -27,19 +27,19 @@ This project aims to demonstrate the efficacy of the EKF in processing sensor da
 - Non-linear state estimation using the Extended Kalman Filter.
 - Comparison of estimated values against ground truth data.
   
-  ## Folder Structure
-  ```bash
-  EKF_Tracking_Of_Ground_Bot/
-  ├── EKF_Cpp/                  # C++ implementation
-  │   ├── build/                # You need to build this directory for compilation of all C++ files
-  │   └── data/                 # Contains the input files
-  │   └── Docs/                 # Contains information about the input and output files
-  │   └── src/                  # All C++ code and header files
-  
-  ├── EKF_Python/               # Python implementation
-  │   ├── Script/               # Python code
-  │   └── data/                 # Input files for the Python version
-  │   └── Output/               # Output folder for results
+## Folder Structure
+    ```bash
+    EKF_Tracking_Of_Ground_Bot/
+    ├── EKF_Cpp/                  # C++ implementation
+    │   ├── build/                # You need to build this directory for compilation of all C++ files
+    │   └── data/                 # Contains the input files
+    │   └── Docs/                 # Contains information about the input and output files
+    │   └── src/                  # All C++ code and header files
+    
+    ├── EKF_Python/               # Python implementation
+    │   ├── Script/               # Python code
+    │   └── data/                 # Input files for the Python version
+    │   └── Output/               # Output folder for results
 
 ## Prerequisites
 
