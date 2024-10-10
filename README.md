@@ -118,6 +118,72 @@ This repository contains both C++ and Python implementations for tracking a grou
 ## Results
 The output of the EKF will be saved in ⁠ Output/output.txt for python and build/output.txt for C++ ⁠. The results will include the estimated position and velocity alongside the ground truth for evaluation.
 
+## Visualizing the Results
+
+We use `matplotlib` to visualize the EKF's performance by plotting estimated positions, velocities, and errors against ground truth and sensor measurements. Follow the steps below to generate these plots.
+
+### Position Visualization
+
+The plots illustrate **X** and **Y** positions and velocities over time, featuring:
+
+![position](EKF_Python/data/Position.png)
+
+- **Noisy Sensor Data (Green Dotted Line)**: 
+  - Measured values (`meas_px`, `meas_py`, `meas_vx`, `meas_vy`) from Lidar and Radar, exhibiting fluctuations due to sensor noise.
+
+- **Ground Truth (Orange Dashed Line)**: 
+  - Actual positions (`gt_px`, `gt_py`) and velocities (`gt_vx`, `gt_vy`) of the ground bot, serving as smooth reference lines.
+
+- **Estimated Position (Blue Solid Line)**: 
+  - Positions (`est_px`, `est_py`) and velocities (`est_vx`, `est_vy`) computed by the EKF, which filter out noise to closely follow the ground truth.
+
+
+### Velocity Visualization
+
+![Velocity](EKF_Python/data/Velocity.png)
+
+This plots include:
+
+- **Estimated Velocity (Blue Solid Line)**: 
+  - Represents computed velocities (`est_vx`, `est_vy`) by the EKF, tracking closely to ground truth velocities (`gt_vx`, `gt_vy`).
+
+- **Ground Truth Velocity (Orange Dashed Line)**: 
+  - Actual velocities represented as smooth lines.
+
+- **Measured Velocity (Green Dotted Line)**: 
+  - Noisy measured velocities (`meas_vx`, `meas_vy`) from sensors.
+
+### Error Visualization
+
+![Error](EKF_Python/data/Error.png)
+
+Error plots illustrate discrepancies between estimated and ground truth values:
+
+- **Position Error**: 
+  - Difference between estimated and ground truth positions, indicating EKF accuracy.
+
+- **Velocity Error**: 
+  - Difference between estimated and ground truth velocities, crucial for assessing filter performance.
+
+### Explanation of Results
+
+- **Kalman Filter's Strength**: 
+  - The EKF refines predictions by integrating sensor input, aligning estimated values (blue) with ground truth (orange).
+
+- **Measurement Noise**: 
+  - Jagged green lines reveal inaccuracies in sensor data, leading to oscillations around the ground truth.
+
+- **Smooth Estimates**: 
+  - The EKF produces smoother estimates, as the blue line remains close to the orange line, compensating for sensor noise.
+
+### Conclusion
+
+- Green dotted lines indicate noisy measurements.
+- Orange dashed lines depict the actual trajectory and velocity.
+- Blue solid lines effectively track the ground truth, smoothing out sensor noise.
+- Error plots provide insights into the accuracy of position and velocity estimates, showcasing EKF performance.
+
+
 ## Future Aspects
 - **GPS Integration:** Enhance geolocation and navigation through GPS fusion with Lidar and Radar.
 - **Machine Learning:** Use algorithms to adaptively refine EKF parameters based on environmental conditions.
