@@ -12,6 +12,7 @@ This repository contains both C++ and Python implementations for tracking a grou
   - [Python Version](#python-version)
 - [File Format](#file-format)
 - [Results](#results)
+- [Visualizing the Results](#visualizing-the-results)
 - [Future Aspects](#future-aspects)
 - [References](#references)
 
