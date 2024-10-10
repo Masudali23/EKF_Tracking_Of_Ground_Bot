@@ -108,6 +108,12 @@ This repository contains both C++ and Python implementations for tracking a grou
     Example:
         4.53271	0.279	-0.842172	53.1339	4.29136	0.215312	2.28434	0.226323
         43.2222	2.65959	0.931181	23.2469	4.29136	0.215312	2.28434	0.226323
+- Here
+    - est_px, est_py: Estimated x and y positions.
+    - est_vx, est_vy: Estimated velocities in x and y directions.
+    - meas_px, meas_py: Measured x and y positions (from sensors like Lidar or Radar).
+    - gt_px, gt_py: Ground truth x and y positions.
+    - gt_vx, gt_vy: Ground truth velocities in x and y directions.
 
 ## Results
 The output of the EKF will be saved in ⁠ Output/output.txt for python and build/output.txt for C++ ⁠. The results will include the estimated position and velocity alongside the ground truth for evaluation.
