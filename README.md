@@ -37,7 +37,6 @@ This repository contains both C++ and Python implementations for tracking a grou
     ├── EKF_Cpp/                  # C++ implementation
     │   ├── build/                # You need to build this directory for compilation of all C++ files
     │   └── data/                 # Contains the input files
-    │   └── Docs/                 # Contains information about the input and output files
     │   └── src/                  # All C++ code and header files
     
     ├── EKF_Python/               # Python implementation
