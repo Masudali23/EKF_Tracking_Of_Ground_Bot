@@ -47,17 +47,31 @@ This repository contains both C++ and Python implementations for tracking a grou
 ## Prerequisites
 
 ### Python Implementation:
-•⁠  ⁠Python 3.6+
+- **Python version**: Python 3.6 or higher is required.
+- **Necessary libraries**: You will need the following Python libraries for the EKF implementation:
+  - `numpy` for matrix operations and numerical computations.
+  - `matplotlib` for plotting results (optional, if you want to visualize the tracking performance).
+  - `pandas` (optional, for handling data input/output in a structured way).
 
-•⁠  ⁠Install necessary packages using:
- 
-    pip install -r requirements.txt
+- To install these packages, run the following commands:
+
+    ```bash
+    pip install numpy
+    pip install matplotlib     # Optional, for visualizing tracking results
+    pip install pandas         # Optional, for data handling
 
 
 ### C++ Implementation:
-- C++11 or higher
-- cmake
-- g++ or clang++
+- **C++ version**: C++11 or higher.
+- **Build system**: You need `cmake` to configure the project.
+- **Compiler**: Use `g++` or `clang++` for compilation.
+
+- To ensure your system meets these requirements, you can install `cmake` and the compiler using the following commands (for **Ubuntu/Debian-based systems**):
+
+    ```bash
+    sudo apt-get update
+    sudo apt-get install cmake g++
+- For other operating systems, use the equivalent package manager (e.g., **brew for macOS**, **choco for Windows**).
 
 ## Usage
 
@@ -105,5 +119,5 @@ The output of the EKF will be saved in ⁠ Output/output.txt for python and bu
 - **Comprehensive System:** Develop a multi-sensor fusion system for advanced autonomous navigation and tracking applications.
 
 ## References
-•⁠  ⁠[Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter)
-•⁠  ⁠[Radar vs Lidar](https://spectrum.ieee.org/radar-vs-lidar)
+-  ⁠[Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter)
+-  ⁠[Radar vs Lidar](https://spectrum.ieee.org/radar-vs-lidar)
