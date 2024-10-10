@@ -31,7 +31,7 @@ This repository contains both C++ and Python implementations for tracking a grou
 - Comparison of estimated values against ground truth data.
   
 ## Folder Structure
-    ```bash
+    
     EKF_Tracking_Of_Ground_Bot/
     ├── EKF_Cpp/                  # C++ implementation
     │   ├── build/                # You need to build this directory for compilation of all C++ files
@@ -71,6 +71,8 @@ This repository contains both C++ and Python implementations for tracking a grou
    make                # this make will do compile all the cpp files
    ./EKF_Tracking ../data/input.txt ./output.txt
 
+- This command `make` triggers the build system to compile all the C++ source files located in the src/ directory. It will generate an executable file that runs the Extended Kalman Filter (EKF) for ground bot tracking. The make process ensures that all necessary object files are created, linked, and optimized according to the CMake configuration. After compiling, the resulting executable can be run with the input data to perform state estimation using fused Lidar and Radar measurements.
+
  ### Python Version
 1.⁠ ⁠Navigate to ⁠ `EKF_Python/Script/` ⁠.
 2.⁠ ⁠Run the Python script:
@@ -80,7 +82,7 @@ This repository contains both C++ and Python implementations for tracking a grou
 
 
 ## Results
-The output of the EKF will be saved in ⁠ Output/output.txt ⁠. The results will include the estimated position and velocity alongside the ground truth for evaluation.
+The output of the EKF will be saved in ⁠ Output/output.txt for python and build/output.txt for C++ ⁠. The results will include the estimated position and velocity alongside the ground truth for evaluation.
 
 ## Future Aspects
 - **GPS Integration:** Enhance geolocation and navigation through GPS fusion with Lidar and Radar.
