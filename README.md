@@ -68,7 +68,7 @@ This repository contains both C++ and Python implementations for tracking a grou
    mkdir build
    cd build
    cmake ..
-   make
+   make                # this make will do compile all the cpp files
    ./EKF_Tracking ../data/input.txt ./output.txt
 
  ### Python Version
