@@ -90,7 +90,7 @@ This repository contains both C++ and Python implementations for tracking a grou
 
 - This command `make` triggers the build system to compile all the C++ source files located in the src/ directory. It will generate an executable file that runs the Extended Kalman Filter (EKF) for ground bot tracking. The make process ensures that all necessary object files are created, linked, and optimized according to the CMake configuration. After compiling, the resulting executable can be run with the input data to perform state estimation using fused Lidar and Radar measurements.
 
- ### Python Version
+### Python Version
 1.⁠ ⁠Navigate to ⁠ `EKF_Python/Script/` ⁠.
 2.⁠ ⁠Run the Python script:
     
