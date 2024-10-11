@@ -16,6 +16,7 @@ This repository contains both C++ and Python implementations for tracking a grou
 - [Code Explanation](#code-explanation)
 - [Future Aspects](#future-aspects)
 - [References](#references)
+- [Collaboration](#collaboration)
 
 ## Introduction
 
@@ -194,14 +195,6 @@ Contains utilities for computing Jacobians and RMSE.
 ### FusionEKF Class:
 Manages sensor fusion: initialization, prediction, and processing of sensor measurements (Lidar/Radar). It initializes based on the first measurement, updates the state transition matrix with time dt, and applies the appropriate update method depending on sensor type.
 
-## Conclusion
-
-- Green dotted lines indicate noisy measurements.
-- Orange dashed lines depict the actual trajectory and velocity.
-- Blue solid lines effectively track the ground truth, smoothing out sensor noise.
-- Error plots provide insights into the accuracy of position and velocity estimates, showcasing EKF performance.
-
-
 ## Future Aspects
 - **GPS Integration:** Enhance geolocation and navigation through GPS fusion with Lidar and Radar.
 - **Machine Learning:** Use algorithms to adaptively refine EKF parameters based on environmental conditions.
@@ -211,3 +204,6 @@ Manages sensor fusion: initialization, prediction, and processing of sensor meas
 ## References
 -  ⁠[Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter)
 -  ⁠[Radar vs Lidar](https://spectrum.ieee.org/radar-vs-lidar)
+
+## Collaboration:
+Contributions to enhance the EKF implementation are welcome! Feel free to collaborate by reaching out!
