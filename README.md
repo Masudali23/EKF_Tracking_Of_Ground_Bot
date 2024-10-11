@@ -13,6 +13,7 @@ This repository contains both C++ and Python implementations for tracking a grou
 - [File Format](#file-format)
 - [Results](#results)
 - [Visualizing the Results](#visualizing-the-results)
+- [Code Explanation](#code-explanation)
 - [Future Aspects](#future-aspects)
 - [References](#references)
 
@@ -185,9 +186,9 @@ This plots include:
 ### KalmanFilter Class:
 Implements the core EKF logic: prediction, standard and extended update (for non-linear radar data).
 #### Key Methods:
-**predict():** Advances state based on transition model.
-**update():** Updates state with Lidar data.
-**update_ekf():** Updates state with non-linear Radar data.
+- **predict():** Advances state based on transition model.
+- **update():** Updates state with Lidar data.
+- **update_ekf():** Updates state with non-linear Radar data.
 ### Tools Class:
 Contains utilities for computing Jacobians and RMSE.
 ### FusionEKF Class:
