@@ -119,6 +119,20 @@ This repository contains both C++ and Python implementations for tracking a grou
 ## Results
 The output of the EKF will be saved in ⁠ Output/output.txt for python and build/output.txt for C++ ⁠. The results will include the estimated position and velocity alongside the ground truth for evaluation.
 
+### Output Comparison: Estimated vs Ground Truth Positions
+
+![position](EKF_Python/data/comparison.png)
+
+The graph included demonstrates the performance of the Extended Kalman Filter (EKF) used in this project by comparing the estimated positions with the ground truth values. It also includes the measured positions captured from sensors like Lidar or Radar for additional context. But in this image I omitted that one for fine comparison.
+
+**Estimated Positions**: These are the positions calculated by the EKF based on sensor inputs and prediction models.
+**Ground Truth Positions**: The actual positions of the object, used as a reference to evaluate the accuracy of the EKF.
+**Measured Positions**: These are the raw sensor readings, which are fed into the EKF.
+
+As we can see from the graph, the estimated trajectory closely follows the ground truth trajectory, showing the EKF's effectiveness. The proximity of the estimated positions to the ground truth positions suggests that the EKF is performing well in filtering out noise and providing accurate state estimations.
+
+The graph also reveals any minor deviations between the estimated and ground truth values, which can be used to further refine the EKF implementation if necessary.
+
 ## Visualizing the Results
 
 We use `matplotlib` to visualize the EKF's performance by plotting estimated positions, velocities, and errors against ground truth and sensor measurements. Follow the steps below to generate these plots.
