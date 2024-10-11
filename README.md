@@ -171,23 +171,13 @@ This plots include:
 ### Error Visualization
 
 ![Error](EKF_Python/data/Error.png)
-
-Error plots illustrate discrepancies between estimated and ground truth values:
-
-- **Position Error**: 
-  - Difference between estimated and ground truth positions, indicating EKF accuracy.
-
-- **Velocity Error**: 
-  - Difference between estimated and ground truth velocities, crucial for assessing filter performance.
+- Error plots illustrate discrepancies between estimated and ground truth values (position)
 
 ### Explanation of Results
-
 - **Kalman Filter's Strength**: 
   - The EKF refines predictions by integrating sensor input, aligning estimated values (blue) with ground truth (orange).
-
 - **Measurement Noise**: 
   - Jagged green lines reveal inaccuracies in sensor data, leading to oscillations around the ground truth.
-
 - **Smooth Estimates**: 
   - The EKF produces smoother estimates, as the blue line remains close to the orange line, compensating for sensor noise.
 
