@@ -92,6 +92,7 @@ This repository contains both C++ and Python implementations for tracking a grou
 
 ### Python Version
 1.⁠ ⁠Navigate to ⁠ `EKF_Python/Script/`⁠
+
 2.⁠ ⁠Run the Python script:
     
     python3 main.py
