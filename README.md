@@ -85,7 +85,7 @@ This repository contains both C++ and Python implementations for tracking a grou
    mkdir build
    cd build
    cmake ..
-   make                # this make will do compile all the cpp files
+   make                # This command will compile all the C++ files
    ./EKF_Tracking ../data/input.txt ./output.txt
 
 - This command `make` triggers the build system to compile all the C++ source files located in the src/ directory. It will generate an executable file that runs the Extended Kalman Filter (EKF) for ground bot tracking. The make process ensures that all necessary object files are created, linked, and optimized according to the CMake configuration. After compiling, the resulting executable can be run with the input data to perform state estimation using fused Lidar and Radar measurements.
@@ -125,16 +125,13 @@ The output of the EKF will be saved in ⁠ Output/output.txt for python and bu
 
 ![position](EKF_Python/data/comparison.png)
 
-The graph included demonstrates the performance of the Extended Kalman Filter (EKF) used in this project by comparing the estimated positions with the ground truth values. It also includes the measured positions captured from sensors like Lidar or Radar for additional context. But in this image I omitted that one for fine comparison.
+The included graph illustrates the performance of the Extended Kalman Filter (EKF) by comparing the estimated positions to the ground truth values, while measured positions from Lidar or Radar sensors are omitted for clarity.
 
-**Estimated Positions**: These are the positions calculated by the EKF based on sensor inputs and prediction models.
-**Ground Truth Positions**: The actual positions of the object, used as a reference to evaluate the accuracy of the EKF.
-**Measured Positions**: These are the raw sensor readings, which are fed into the EKF.
+**Estimated Positions:** Calculated by the EKF using sensor inputs and prediction models.
+**Ground Truth Positions:** Actual positions of the object, serving as a reference for EKF accuracy.
+**Measured Positions:** Raw sensor readings inputted into the EKF.
 
-As we can see from the graph, the estimated trajectory closely follows the ground truth trajectory, showing the EKF's effectiveness. The proximity of the estimated positions to the ground truth positions suggests that the EKF is performing well in filtering out noise and providing accurate state estimations.
-
-The graph also reveals any minor deviations between the estimated and ground truth values, which can be used to further refine the EKF implementation if necessary.
-
+The graph shows that the estimated trajectory closely follows the ground truth, demonstrating the EKF's effectiveness in filtering noise and providing accurate state estimations. Minor deviations between estimated and ground truth values highlight areas for potential refinement of the EKF implementation.
 ## Visualizing the Results
 
 We use `matplotlib` to visualize the EKF's performance by plotting estimated positions, velocities, and errors against ground truth and sensor measurements. Follow the steps below to generate these plots.
@@ -145,43 +142,18 @@ The plots illustrate **X** and **Y** positions and velocities over time, featuri
 
 ![position](EKF_Python/data/Position.png)
 
-- **Noisy Sensor Data (Green Dotted Line)**: 
-  - Measured values (`meas_px`, `meas_py`, `meas_vx`, `meas_vy`) from Lidar and Radar, exhibiting fluctuations due to sensor noise.
-
-- **Ground Truth (Orange Dashed Line)**: 
-  - Actual positions (`gt_px`, `gt_py`) and velocities (`gt_vx`, `gt_vy`) of the ground bot, serving as smooth reference lines.
-
-- **Estimated Position (Blue Solid Line)**: 
-  - Positions (`est_px`, `est_py`) and velocities (`est_vx`, `est_vy`) computed by the EKF, which filter out noise to closely follow the ground truth.
-
+The plot shows **Noisy Sensor Data (green dotted line)** from Lidar and Radar, reflecting fluctuations due to sensor noise, alongside the **Ground Truth (orange dashed line)** as the actual positions and velocities. The **Estimated Position (blue solid line)** represents the EKF-computed values that closely follow the ground truth while filtering out noise.
 
 ### Velocity Visualization
 
 ![Velocity](EKF_Python/data/Velocity.png)
 
-This plots include:
-
-- **Estimated Velocity (Blue Solid Line)**: 
-  - Represents computed velocities (`est_vx`, `est_vy`) by the EKF, tracking closely to ground truth velocities (`gt_vx`, `gt_vy`).
-
-- **Ground Truth Velocity (Orange Dashed Line)**: 
-  - Actual velocities represented as smooth lines.
-
-- **Measured Velocity (Green Dotted Line)**: 
-  - Noisy measured velocities (`meas_vx`, `meas_vy`) from sensors.
+This plot includes the **Estimated Velocity (blue solid line)**, closely following the **Ground Truth Velocity (orange dashed line)**, and the **Measured Velocity (green dotted line)**, which shows the noisy sensor measurements.
 
 ### Error Visualization
 
 ![Error](EKF_Python/data/Error.png)
 - Error plots illustrate discrepancies between estimated and ground truth values (position)
-
-### Explanation of Results
-- **Kalman Filter's Strength**: 
-  - The EKF refines predictions by integrating sensor input, aligning estimated values (blue) with ground truth (orange).
-- **Measurement Noise**: 
-  - Jagged green lines reveal inaccuracies in sensor data, leading to oscillations around the ground truth.
-- **Smooth Estimates**: 
-  - The EKF produces smoother estimates, as the blue line remains close to the orange line, compensating for sensor noise.
 
 ## Code Explanation
 ### KalmanFilter Class:
