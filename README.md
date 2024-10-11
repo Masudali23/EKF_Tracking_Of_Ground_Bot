@@ -181,6 +181,18 @@ This plots include:
 - **Smooth Estimates**: 
   - The EKF produces smoother estimates, as the blue line remains close to the orange line, compensating for sensor noise.
 
+## Code Explanation
+### KalmanFilter Class:
+Implements the core EKF logic: prediction, standard and extended update (for non-linear radar data).
+#### Key Methods:
+**predict():** Advances state based on transition model.
+**update():** Updates state with Lidar data.
+**update_ekf():** Updates state with non-linear Radar data.
+### Tools Class:
+Contains utilities for computing Jacobians and RMSE.
+### FusionEKF Class:
+Manages sensor fusion: initialization, prediction, and processing of sensor measurements (Lidar/Radar). It initializes based on the first measurement, updates the state transition matrix with time dt, and applies the appropriate update method depending on sensor type.
+
 ## Conclusion
 
 - Green dotted lines indicate noisy measurements.
