@@ -181,7 +181,7 @@ This plots include:
 - **Smooth Estimates**: 
   - The EKF produces smoother estimates, as the blue line remains close to the orange line, compensating for sensor noise.
 
-### Conclusion
+## Conclusion
 
 - Green dotted lines indicate noisy measurements.
 - Orange dashed lines depict the actual trajectory and velocity.
